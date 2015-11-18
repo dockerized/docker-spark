@@ -21,12 +21,12 @@
 # Docker image from https://github.com/carlossg/docker-maven/ and
 # spark-base.
 
-FROM gcr.io/google_containers/spark-base:latest
+FROM xiocode/spark-base:latest
 
 ENV ZEPPELIN_TAG  v0.5.5
 ENV MAVEN_VERSION 3.3.3
 ENV SPARK_MINOR   1.5
-ENV SPARK_PATCH   1
+ENV SPARK_PATCH   2
 ENV SPARK_VER     ${SPARK_MINOR}.${SPARK_PATCH}
 ENV HADOOP_MINOR  2.6
 ENV HADOOP_PATCH  1

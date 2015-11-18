@@ -16,6 +16,8 @@
 
 . /start-common.sh
 
+echo "${SPARK_MASTER_SERVICE_HOST} spark-master" >> /etc/hosts
+
 echo "Use kubectl exec spark-driver -it bash to invoke commands"
 while true; do
   sleep 100
