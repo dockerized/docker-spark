@@ -16,7 +16,9 @@
 
 . /start-common.sh
 
-# echo "${SPARK_MASTER_SERVICE_HOST} spark-master" >> /etc/hosts
+if [ -z "$SPARK_MASTER_SERVICE_HOST" ]; then
+    echo "$SPARK_MASTER_SERVICE_HOST spark-master" >> /etc/hosts
+fi
 
 # Run spark-class directly so that when it exits (or crashes), the pod restarts.
 /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --ip spark-master --port 7077 --webui-port 8080
