@@ -20,6 +20,6 @@ spark_worker_2:
     environment:
         - SPARK_MASTER_SERVICE_HOST=0.0.0.0
     ports:
-        - "8081:8081"
+        - "8082:8081"
     links:
         - "spark_master:spark-master"
